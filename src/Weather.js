@@ -1,5 +1,5 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
@@ -34,31 +34,8 @@ if (weatherData.ready) {
     </div>
     </div>
     </form>
-    <h1>{weatherData.city}</h1>
-    <ul>
-        <li>
-         <FormattedDate date={weatherData.date}/>
-        </li>
-        <li className="text-capitalize">{weatherData.description}</li>
-    </ul>
-    <div className="row">
-        <div className="col-6">
-        <img src={weatherData.iconUrl}
-        alt={weatherData.description}/>
-        <span className="temperature">{Math.round(weatherData.temperature)}</span> 
-        <span className="unit">°F</span>
-        </div>
-        <div className="col-6">
-            <ul>
-                <li>
-                    Humidity: {weatherData.humidity}%
-                </li>
-                <li>
-                    Wind: {weatherData.wind} mph
-                </li>
-            </ul>
-        </div>
-    </div>
+    <WeatherInfo data={weatherData} />
+    
 </div>
 ;
 } else {
