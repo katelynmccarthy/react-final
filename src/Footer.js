@@ -7,7 +7,7 @@ export default function Footer() {
       <small className="row">
         <div className="col-md-6">
           <a
-            href="/"
+            href="https://github.com/katelynmccarthy/react-final"
             target="_blank"
             rel="noreferrer"
           >
@@ -15,7 +15,7 @@ export default function Footer() {
           </a>
           <span> by </span>
           <a
-            href="/"
+            href="https://katelyn-mccarthy-portfolio.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <div className="host col-md-6">
           <span>Hosted on </span>
-          <a href="/" target="_blank" rel="noreferrer">
+          <a href="https://app.netlify.com/teams/katelynmccarthy/overview?_ga=2.256998539.1053835246.1669829617-1320103757.1665079561" target="_blank" rel="noreferrer">
             Netlify
           </a>
         </div>
