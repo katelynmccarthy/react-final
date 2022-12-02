@@ -74,7 +74,7 @@ export default function SearchForm(props) {
               />
               <small className="form-text text-muted d-none d-md-block">
                 Enter city (<em>e.g.</em>, Cleveland) or city and 2-letter country
-                code (<em>e.g.</em>, Melbourne, AU).
+                code (<em>e.g.</em>, Paris, FR).
               </small>
               <small className="form-text text-muted d-block d-md-none search-instruction">
                 <em>e.g.</em>, Toronto or Melbourne, AU
