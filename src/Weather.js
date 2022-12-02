@@ -15,7 +15,7 @@ export default function Weather(props) {
             humidity: response.data.temperature.humidity,
             date: new Date(response.data.time * 1000),
             wind: response.data.wind.speed,
-            city: response.data.name,
+            city: response.data.city,
             description: response.data.condition.description,
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
           });
@@ -23,7 +23,7 @@ export default function Weather(props) {
 
     function search() {
         const apiKey = "7106ea97b4b3928fe085f9a75bao0f8t";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=imperial`;
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
         axios.get(apiUrl).then(handleResponse);
       }
 
