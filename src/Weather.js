@@ -21,6 +21,13 @@ export default function Weather(props) {
           });
     }
 
+    function search() {
+        const apiKey = "7106ea97b4b3928fe085f9a75bao0f8t";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=imperial`;
+        axios.get(apiUrl).then(handleResponse);
+      }
+
+
     function handleSubmit(event) {
         event.preventDefault();
         search();
@@ -28,12 +35,6 @@ export default function Weather(props) {
     
       function handleCityChange(event) {
         setCity(event.target.value);
-      }
-
-      function search() {
-        const apiKey = "7106ea97b4b3928fe085f9a75bao0f8t";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=imperial`;
-        axios.get(apiUrl).then(handleResponse);
       }
 
     if (weatherData.ready) {
