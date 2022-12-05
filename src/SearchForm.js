@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import axios from "axios";
 import FormatTime from "./FormatTime";
@@ -77,7 +79,7 @@ export default function SearchForm(props) {
                 code (<em>e.g.</em>, Paris, FR).
               </small>
               <small className="form-text text-muted d-block d-md-none search-instruction">
-                <em>e.g.</em>, Toronto or Melbourne, AU
+                <em>e.g.</em>, Cleveland or Paris, FR
               </small>
             </div>
             <div className="col-1 p-0 d-none d-md-block">
@@ -162,11 +164,11 @@ export default function SearchForm(props) {
                 onChange={handleCityChange}
               />
               <small className="form-text text-muted d-none d-md-block">
-                Enter city (<em>e.g.</em>, Toronto) or city and 2-letter country
-                code (<em>e.g.</em>, Melbourne, AU).
+                Enter city (<em>e.g.</em>, Cleveland) or city and 2-letter country
+                code (<em>e.g.</em>, Paris, FR).
               </small>
               <small className="form-text text-muted d-block d-md-none search-instruction">
-                <em>e.g.</em>, Toronto or Melbourne, AU
+                <em>e.g.</em>, Cleveland or Paris, FR
               </small>
             </div>
             <div className="col-1 p-0 d-none d-md-block">
@@ -203,8 +205,8 @@ export default function SearchForm(props) {
               </li>
               <li>
                 <small>
-                  <span>Humidity: {weatherData.humidity}%, </span>
-                  <span>Wind: {Math.round(weatherData.windSpeed)} mph</span>
+                  <span><b>Humidity:</b> {weatherData.humidity}%, </span>
+                  <span><b>Wind:</b> {Math.round(weatherData.windSpeed)} mph</span>
                 </small>
               </li>
             </ul>

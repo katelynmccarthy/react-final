@@ -1,28 +1,28 @@
 .App {
-    background-color: #fff;
-    border: 1px solid rgba(125, 125, 125, 0.25);
-    border-radius: 10px;
-    box-shadow: 5px 5px 30px -5px rgb(0 0 0 / 35%);
-    font-family: "Jost", sans-serif;
-    margin: 100px auto;
-    max-width: 705px;
-    padding: 20px 22px;
+  background-color: #fff;
+  border: 1px solid rgba(125, 125, 125, 0.25);
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px -5px rgb(0 0 0 / 35%);
+  font-family: "Jost", sans-serif;
+  margin: 100px auto;
+  max-width: 705px;
+  padding: 20px 22px;
+}
+
+.App .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    max-width: 265px;
   }
-  
-  .App .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  
-  .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .App {
-      max-width: 265px;
-    }
-  }
+}
