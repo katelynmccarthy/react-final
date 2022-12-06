@@ -17,10 +17,6 @@ export default function Forecast() {
               <strong>23° </strong>
               <span>15°</span>
             </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 0%</span>
-            </div>
           </div>
         </div>
       </div>
@@ -36,10 +32,6 @@ export default function Forecast() {
             <div className="forecast-temp">
               <strong>23° </strong>
               <span>16°</span>
-            </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 63%</span>
             </div>
           </div>
         </div>
@@ -57,10 +49,6 @@ export default function Forecast() {
               <strong>28° </strong>
               <span>18°</span>
             </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 100%</span>
-            </div>
           </div>
         </div>
       </div>
@@ -76,10 +64,6 @@ export default function Forecast() {
             <div className="forecast-temp">
               <strong>23° </strong>
               <span>16°</span>
-            </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 27%</span>
             </div>
           </div>
         </div>
@@ -97,10 +81,6 @@ export default function Forecast() {
               <strong>19° </strong>
               <span>12°</span>
             </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 0%</span>
-            </div>
           </div>
         </div>
       </div>
@@ -117,10 +97,6 @@ export default function Forecast() {
               <strong>22° </strong>
               <span>11°</span>
             </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 0%</span>
-            </div>
           </div>
         </div>
       </div>
@@ -136,10 +112,6 @@ export default function Forecast() {
             <div className="forecast-temp">
               <strong>15° </strong>
               <span>13°</span>
-            </div>
-            <div className="precipitation">
-              <i className="fa-solid fa-umbrella"></i>
-              <span> 86%</span>
             </div>
           </div>
         </div>

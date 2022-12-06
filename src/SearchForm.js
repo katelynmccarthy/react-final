@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import axios from "axios";
 import FormatTime from "./FormatTime";
@@ -116,9 +114,9 @@ export default function SearchForm(props) {
               </li>
               <li>
                 <small>
-                  <span>Humidity: {weatherData.humidity}%, </span>
+                  <span><b>Humidity:</b> {weatherData.humidity}%, </span>
                   <span>
-                    Wind: {Math.round(weatherData.windSpeed * 3.6)} km/h
+                    <b>Wind:</b> {Math.round(weatherData.windSpeed * 3.6)} km/h
                   </span>
                 </small>
               </li>

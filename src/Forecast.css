@@ -1,6 +1,6 @@
 .Forecast {
     text-align: center;
-    font-size: 15px;
+    font-size: 22px;
     line-height: 2;
   }
   
@@ -9,13 +9,12 @@
   }
   
   .Forecast .forecast-icon {
-    width: 40px;
+    width: 60px;
     height: auto;
   }
   
-  .Forecast .forecast-temp,
-  .Forecast .precipitation {
-    font-size: 12px;
+  .Forecast .forecast-temp {
+    font-size: 15px;
   }
   
   .Forecast .today-forecast {
