@@ -1,121 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Forecast.css";
+import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
-export default function Forecast() {
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+  if (loaded) {
   return (
     <div className="Forecast row mb-4">
       <div className="col-sm forecast-cards">
         <div className="card today-forecast">
           <div className="card-body">
-            <div>Tue</div>
-            <img
-              src="http://openweathermap.org/img/wn/01d@2x.png"
-              alt="clear sky"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>23° </strong>
-              <span>15°</span>
-            </div>
+          <WeatherForecastDay data={forecast[0]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Wed</div>
-            <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              alt="rain"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>23° </strong>
-              <span>16°</span>
-            </div>
+          <WeatherForecastDay data={forecast[1]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Thu</div>
-            <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              alt="rain"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>28° </strong>
-              <span>18°</span>
-            </div>
+          <WeatherForecastDay data={forecast[2]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Fri</div>
-            <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              alt="rain"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>23° </strong>
-              <span>16°</span>
-            </div>
+          <WeatherForecastDay data={forecast[3]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Sat</div>
-            <img
-              src="http://openweathermap.org/img/wn/01d@2x.png"
-              alt="clear sky"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>19° </strong>
-              <span>12°</span>
-            </div>
+          <WeatherForecastDay data={forecast[4]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Sun</div>
-            <img
-              src="http://openweathermap.org/img/wn/04d@2x.png"
-              alt="cloudy"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>22° </strong>
-              <span>11°</span>
-            </div>
+          <WeatherForecastDay data={forecast[5]} />
           </div>
-        </div>
-      </div>
-      <div className="col-sm forecast-cards">
-        <div>
           <div className="card-body">
-            <div>Mon</div>
-            <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              alt="rain"
-              className="forecast-icon"
-            />
-            <div className="forecast-temp">
-              <strong>15° </strong>
-              <span>13°</span>
-            </div>
+          <WeatherForecastDay data={forecast[6]} />
+          </div>
           </div>
         </div>
       </div>
-    </div>
+
   );
+} else {
+  let apiKey = "6f7fc1e8921ca5e8743c4596d4b381f9";
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(handleResponse);
+
+  return null;
+}
 }
