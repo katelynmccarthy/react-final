@@ -8,7 +8,7 @@ import "./SearchForm.css";
 export default function SearchForm(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
   const [city, setCity] = useState(props.currentLocation);
-  const [unit, setUnit] = useState("metric");
+  const [unit, setUnit] = useState("imperial");
 
   function getWeather(response) {
     setWeatherData({
