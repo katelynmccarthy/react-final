@@ -23,6 +23,7 @@ export default function SearchForm(props) {
       temperature: response.data.main.temp,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       feelsLike: response.data.main.feels_like,
+      coordinates: response.data.coord
     });
   }
 
@@ -145,7 +146,7 @@ export default function SearchForm(props) {
             </div>
           </div>
         </div>
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else if (weatherData.loaded && unit === "imperial") {
@@ -232,7 +233,7 @@ export default function SearchForm(props) {
             </div>
           </div>
         </div>
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
